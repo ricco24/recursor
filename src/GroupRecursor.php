@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model\Recursor;
+namespace Kelemen\Recursor;
 
 class GroupRecursor extends Recursor
 {

@@ -30,7 +30,7 @@ $categories = [
 ## NodeListRecursor
 Only lists (elements without children) has title, nodes are arrays with children.
 ```php
-use App\Model\Recursor\NodeListRecursor;
+use Kelemen\Recursor\NodeListRecursor;
 
 $recursor = new NodeListRecursor($categories, 'title', 'parent_id');
 # sets maximal recursion depth
@@ -51,7 +51,7 @@ array(2) {
 ## GroupRecursor
 Very usefull to generate array for form selects.
 ```php
-use App\Model\Recursor\GroupRecursor;
+use Kelemen\Recursor\GroupRecursor;
 
 $recursor = new GroupRecursor($categories, 'portal', 'title', 'parent_id');
 $list = $recursor->getList();
@@ -97,7 +97,7 @@ If you want to create custom recursor with children in result you need to define
 ### Example of custom recursor
 This recursor counts recursive item children.
 ```php
-namespace App\Model\Recursor;
+namespace Kelemen\Recursor;
 
 class CategoryRecursor extends Recursor
 {
